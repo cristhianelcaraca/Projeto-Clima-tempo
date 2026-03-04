@@ -3,33 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <title>Document</title>
   </head>
+
   <body>
     <header>
-        <h1>Weather Channel</h1>
-     
+      <h1>Weather Channel</h1>
     </header>
     <main>
-        <div class="currently-weather">
-             <form class="search-form">
-        <input type="search" placeholder="Enter a city..." required class="search-form-input"/>
-        <input type="submit" value="Search" class="search-form-button" />
-      </form>
-      <h2>Tokyo</h2>
-      
-      <p>Tuesday 17:02, Sunny
-      <br />
-      Humidity 57%, Wind 16 km/h>
-     
-      </p>
-     <div>🌞 19°C </div>
-    </div>
-     </div>
+      <div class="currently-weather">
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
+
+        <div class="weather-app-data">
+          <div class="weather-left">
+            <h2 class="weather-app-city">
+              <i class="fa-solid fa-location-dot"></i> Tokyo
+            </h2>
+            <div class="weather-temp-row">
+              <div class="weather-app-temperature">19°C</div>
+            </div>
+            <div class="weather-card">
+              <div class="info-box">
+                <p>Humidity</p>
+                <strong>65%</strong>
+              </div>
+              <div class="info-box">
+                <p>Wind</p>
+                <strong>12 km/h</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna direita -->
+          <div class="weather-right">
+            <div class="weather-app-icon">🌞</div>
+            <p class="weather-app-details">Tuesday 17:02, Sunny</p>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
       This project was coded by

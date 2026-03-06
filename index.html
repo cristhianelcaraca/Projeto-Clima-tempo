@@ -14,7 +14,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="src/style.css" />
-    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Weather App</title>
   </head>
 
   <body>
@@ -23,40 +24,42 @@
     </header>
     <main>
       <div class="currently-weather">
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a city..."
             required
             class="search-form-input"
+            id="search-form-input"
           />
           <input type="submit" value="Search" class="search-form-button" />
         </form>
 
         <div class="weather-app-data">
           <div class="weather-left">
-            <h2 class="weather-app-city">
-              <i class="fa-solid fa-location-dot"></i> Tokyo
+            <h2 class="weather-app-city" id="city">
+              <i class="fa-solid fa-location-dot"></i>
             </h2>
             <div class="weather-temp-row">
-              <div class="weather-app-temperature">19°C</div>
+              <div class="weather-app-temperature" id="temperature">°C</div>
             </div>
             <div class="weather-card">
               <div class="info-box">
                 <p>Humidity</p>
-                <strong>65%</strong>
+                <strong id="humidity">65%</strong>
               </div>
               <div class="info-box">
                 <p>Wind</p>
-                <strong>12 km/h</strong>
+                <strong id="wind-speed"></strong>
               </div>
             </div>
           </div>
 
-          <!-- Coluna direita -->
           <div class="weather-right">
-            <div class="weather-app-icon">🌞</div>
-            <p class="weather-app-details">Tuesday 17:02, Sunny</p>
+            <div class="weather-app-icon" id="icon"></div>
+            <p class="weather-app-details" id="weather-app-details">
+              Tuesday 17:02, Sunny
+            </p>
           </div>
         </div>
       </div>
@@ -79,5 +82,6 @@
         Netlify</a
       >
     </footer>
+    <script src="src/app.js"></script>
   </body>
 </html>
